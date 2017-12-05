@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/CCS/src-gen" creationIcons="false" editDirectory="/CCS.edit/src-gen"
+    editorDirectory="/CCS.editor/src-gen" modelPluginID="CCS" modelName="CCS" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>cCS.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="CCS" disposableProviderFactory="true" ecorePackage="cCS.ecore#/">
+    <genClasses ecoreClass="cCS.ecore#//Config">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Config/component"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Config/connector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Config/interface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Config/links"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Connector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Connector/neweclass16"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Connector/neweclass17"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Component">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Component/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Component/constraints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Component/interface"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="cCS.ecore#//ElemArchi"/>
+    <genClasses ecoreClass="cCS.ecore#//Properties"/>
+    <genClasses ecoreClass="cCS.ecore#//Constraints"/>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceComponent/ports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceComponent/services"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PortsComponent"/>
+    <genClasses ecoreClass="cCS.ecore#//ServicesComponent"/>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceConfig">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceConfig/ports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceConfig/services"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Links"/>
+    <genClasses ecoreClass="cCS.ecore#//PortsConfig"/>
+    <genClasses ecoreClass="cCS.ecore#//ServicesConfig"/>
+    <genClasses ecoreClass="cCS.ecore#//Attachments"/>
+    <genClasses ecoreClass="cCS.ecore#//Bindings"/>
+    <genClasses ecoreClass="cCS.ecore#//Glue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Glue/neweclass18"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceConnector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceConnector/role"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Role"/>
+    <genClasses ecoreClass="cCS.ecore#//PPComp">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PPComp/pb"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PPComp/pra"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RPComp">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RPComp/rb"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RPComp/rpa"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PSComp"/>
+    <genClasses ecoreClass="cCS.ecore#//RSComp"/>
+    <genClasses ecoreClass="cCS.ecore#//PPConf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PPConf/pb"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RPConf">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RPConf/rb"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PSConf"/>
+    <genClasses ecoreClass="cCS.ecore#//RSConf"/>
+    <genClasses ecoreClass="cCS.ecore#//PB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PB/pp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PB/pp2"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RB/rp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RB/rp2"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PRA">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PRA/pp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PRA/rr"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RPA">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RPA/rp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RPA/pr"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PR">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PR/rpa"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RR">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RR/pra"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Server"/>
+    <genClasses ecoreClass="cCS.ecore#//Server.1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Server.1/serverconfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Server.1/interfacesserver"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/server"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/rpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/client"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RPC">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//RPC/interfacerpc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Client">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Client/interfacesc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServerConfig">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/connectionmanager"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/securitymanager"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/db"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/connectdb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/secdb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/connectsec"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ConnectionManager">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ConnectionManager/interfacesconnect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//SecurityManager">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//SecurityManager/securityinterface"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//DB">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//DB/dbinterface"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//AttachmentCR"/>
+    <genClasses ecoreClass="cCS.ecore#//AttachmentRC"/>
+    <genClasses ecoreClass="cCS.ecore#//interfacesC">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//interfacesC/portrc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//interfacesC/portpc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PortRC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortRC/attachmentrc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PortPC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortPC/attachmentcr"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceRPC">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/prolerpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/rrolerpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/rrolerpc.1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/prolerpc.1"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RRoleRPCClient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RRoleRPCClient/attachmentcr"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PRoleRPCClient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PRoleRPCClient/attachmentrc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfacesConnect">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/palpha2connect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/pconnect2alpha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/pconnect2gamma"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/pgamma2connect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfacesServer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesServer/portps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesServer/portrs"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PortPS">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortPS/attachementsrpc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PortRS">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortRS/attachementsrpcserv"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RRoleRPCServer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RRoleRPCServer/attachementsrpc"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PRoleRPCSev">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PRoleRPCSev/attachementsrpcserv"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//AttachementSRPC"/>
+    <genClasses ecoreClass="cCS.ecore#//AttachementsRPCServ"/>
+    <genClasses ecoreClass="cCS.ecore#//SecurityInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//SecurityInterface/psec2beta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//SecurityInterface/pbeta2sec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//SecurityInterface/palpha2sec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//SecurityInterface/psec2alpha"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//DBInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//DBInterface/pdb2gamma"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//DBInterface/pgamma2db"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//DBInterface/pdb2beta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//DBInterface/pbeta2db"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Alpha">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Alpha/interfacealpha"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Beta">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Beta/interfacebeta"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Gamma">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Gamma/interfacegamma"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PDB2Gamma">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PDB2Gamma/adb2gamma"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PSec2Alpha">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PSec2Alpha/asec2alpha"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PConnect2Alpha">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PConnect2Alpha/aconnect2alpha"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PAlpha2Sec">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PAlpha2Sec/aalpha2sec"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PGamma2DB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PGamma2DB/agamma2db"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PAlpha2Connect">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PAlpha2Connect/aalpha2connect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceAlpha">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceAlpha/rsec2alpha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceAlpha/ralpha2sec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceAlpha/rconnect2alpha"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceAlpha/ralpha2connect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceBeta">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceBeta/rbeta2sec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceBeta/rsec2beta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceBeta/rbeta2db"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceBeta/rdb2beta"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//InterfaceGamma">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceGamma/rconnect2gamma"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceGamma/rgamma2connect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceGamma/rdb2gamma"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceGamma/rgamma2db"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PSec2Beta">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PSec2Beta/asec2beta"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PBeta2Sec">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PBeta2Sec/abeta2sec"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RBeta2DB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RBeta2DB/abeta2db"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RBeta2Sec">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RBeta2Sec/abeta2sec"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RSec2Beta">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RSec2Beta/asec2beta"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RDB2Beta">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RDB2Beta/adb2beta"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RConnect2Alpha">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RConnect2Alpha/aconnect2alpha"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RAlpha2Sec">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RAlpha2Sec/aalpha2sec"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RSec2Alpha">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RSec2Alpha/asec2alpha"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RAlpha2Connect">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RAlpha2Connect/aalpha2connect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PConnect2Gamma">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PConnect2Gamma/aconnect2gamma"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PGamma2Connect">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PGamma2Connect/agamma2connect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PDB2Beta">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PDB2Beta/adb2beta"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//PBeta2DB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PBeta2DB/abeta2db"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RGamma2DB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RGamma2DB/agamma2db"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RDB2Gamma">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RDB2Gamma/adb2gamma"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RGamma2Connect">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RGamma2Connect/agamma2connect"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//RConnect2Gamma">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RConnect2Gamma/aconnect2gamma"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ADB2Gamma"/>
+    <genClasses ecoreClass="cCS.ecore#//AConnect2Gamma"/>
+    <genClasses ecoreClass="cCS.ecore#//AGamma2DB"/>
+    <genClasses ecoreClass="cCS.ecore#//AGamma2Connect"/>
+    <genClasses ecoreClass="cCS.ecore#//ADB2Beta"/>
+    <genClasses ecoreClass="cCS.ecore#//ABeta2DB"/>
+    <genClasses ecoreClass="cCS.ecore#//ASec2Beta"/>
+    <genClasses ecoreClass="cCS.ecore#//ABeta2Sec"/>
+    <genClasses ecoreClass="cCS.ecore#//AConnect2Alpha"/>
+    <genClasses ecoreClass="cCS.ecore#//AAlpha2Connect"/>
+    <genClasses ecoreClass="cCS.ecore#//ASec2Alpha"/>
+    <genClasses ecoreClass="cCS.ecore#//AAlpha2Sec"/>
+  </genPackages>
+</genmodel:GenModel>
