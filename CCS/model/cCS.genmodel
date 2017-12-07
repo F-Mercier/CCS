@@ -89,14 +89,16 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RR/pra"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//Server"/>
-    <genClasses ecoreClass="cCS.ecore#//Server.1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Server.1/serverconfig"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//Server.1/interfacesserver"/>
+    <genClasses ecoreClass="cCS.ecore#//ServerComp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerComp/serverconfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerComp/interfacesserver"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//System">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/server"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/rpc"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/client"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/sys2clientbinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//System/systeminterface"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//RPC">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//RPC/interfacerpc"/>
@@ -111,6 +113,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/connectdb"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/secdb"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/connectsec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/serv2servbinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfig/serverconfiginterface"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//ConnectionManager">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ConnectionManager/interfacesconnect"/>
@@ -126,6 +130,7 @@
     <genClasses ecoreClass="cCS.ecore#//interfacesC">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//interfacesC/portrc"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//interfacesC/portpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//interfacesC/sys2clientcp"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//PortRC">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortRC/attachmentrc"/>
@@ -134,10 +139,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortPC/attachmentcr"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//InterfaceRPC">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/prolerpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/prolerpc2"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/rrolerpc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/rrolerpc.1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/prolerpc.1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/rrolerpc2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfaceRPC/prolerpc"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//RRoleRPCClient">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//RRoleRPCClient/attachmentcr"/>
@@ -150,10 +155,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/pconnect2alpha"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/pconnect2gamma"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/pgamma2connect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesConnect/servconf2connectconnectp"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//InterfacesServer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesServer/portps"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesServer/portrs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//InterfacesServer/servconf2servcompcompp"/>
     </genClasses>
     <genClasses ecoreClass="cCS.ecore#//PortPS">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//PortPS/attachementsrpc"/>
@@ -292,5 +299,42 @@
     <genClasses ecoreClass="cCS.ecore#//AAlpha2Connect"/>
     <genClasses ecoreClass="cCS.ecore#//ASec2Alpha"/>
     <genClasses ecoreClass="cCS.ecore#//AAlpha2Sec"/>
+    <genClasses ecoreClass="cCS.ecore#//Sys2ClientBinding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Sys2ClientBinding/sys2clientsp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Sys2ClientBinding/sys2clientcp"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//SystemInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//SystemInterface/sys2clientsp"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Sys2ClientSP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Sys2ClientSP/sys2clientbinding"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Sys2ClientCP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Sys2ClientCP/sys2clientbinding"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//Serv2ServBinding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Serv2ServBinding/servconf2servcompconfp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//Serv2ServBinding/servconf2servcompcompp"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServerConfigInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfigInterface/servconf2servcompconfp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cCS.ecore#//ServerConfigInterface/servconf2connectservp"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServConf2ServCompConfP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//ServConf2ServCompConfP/serv2servbinding"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServConf2ServCompCompP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//ServConf2ServCompCompP/serv2servbinding"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServConf2ConnectServP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//ServConf2ConnectServP/servconf2connectbinding"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServConf2ConnectConnectP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//ServConf2ConnectConnectP/servconf2connectbinding"/>
+    </genClasses>
+    <genClasses ecoreClass="cCS.ecore#//ServConf2ConnectBinding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//ServConf2ConnectBinding/servconf2connectservp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cCS.ecore#//ServConf2ConnectBinding/servconf2connectconnectp"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

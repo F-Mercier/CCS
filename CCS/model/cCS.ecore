@@ -87,7 +87,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pra" eType="#//PRA" eOpposite="#//PRA/rr"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//Component"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//Component">
+  <eClassifiers xsi:type="ecore:EClass" name="ServerComp" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="serverconfig" upperBound="-1"
         eType="#//ServerConfig" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfacesserver" upperBound="-1"
@@ -95,11 +95,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//Config">
     <eStructuralFeatures xsi:type="ecore:EReference" name="server" upperBound="-1"
-        eType="#//Server.1" containment="true"/>
+        eType="#//ServerComp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rpc" upperBound="-1" eType="#//RPC"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="client" upperBound="-1"
         eType="#//Client" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientbinding" upperBound="-1"
+        eType="#//Sys2ClientBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systeminterface" upperBound="-1"
+        eType="#//SystemInterface" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RPC" eSuperTypes="#//Connector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfacerpc" upperBound="-1"
@@ -122,6 +126,10 @@
         eType="#//Beta" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectsec" upperBound="-1"
         eType="#//Alpha" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serv2servbinding" upperBound="-1"
+        eType="#//Serv2ServBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serverconfiginterface"
+        upperBound="-1" eType="#//ServerConfigInterface" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfacesconnect" upperBound="-1"
@@ -142,6 +150,8 @@
         eType="#//PortRC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portpc" upperBound="-1"
         eType="#//PortPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientcp" upperBound="-1"
+        eType="#//Sys2ClientCP" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PortRC" eSuperTypes="#//RPComp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrc" eType="#//AttachmentRC"/>
@@ -150,11 +160,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcr" eType="#//AttachmentCR"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceRPC" eSuperTypes="#//InterfaceConnector">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prolerpc" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prolerpc2" upperBound="-1"
         eType="#//PRoleRPCClient" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rrolerpc" upperBound="-1"
         eType="#//RRoleRPCClient" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rrolerpc" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rrolerpc2" upperBound="-1"
         eType="#//RRoleRPCServer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prolerpc" upperBound="-1"
         eType="#//PRoleRPCSev" containment="true"/>
@@ -174,12 +184,16 @@
         eType="#//PConnect2Gamma" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pgamma2connect" upperBound="-1"
         eType="#//PGamma2Connect" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2connectconnectp"
+        upperBound="-1" eType="#//ServConf2ConnectConnectP" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfacesServer" eSuperTypes="#//InterfaceComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portps" upperBound="-1"
         eType="#//PortPS" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portrs" upperBound="-1"
         eType="#//PortRS" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2servcompcompp"
+        upperBound="-1" eType="#//ServConf2ServCompCompP" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PortPS" eSuperTypes="#//PPComp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachementsrpc" eType="#//AttachementSRPC"/>
@@ -341,4 +355,56 @@
   <eClassifiers xsi:type="ecore:EClass" name="AAlpha2Connect" eSuperTypes="#//RPA"/>
   <eClassifiers xsi:type="ecore:EClass" name="ASec2Alpha" eSuperTypes="#//PRA"/>
   <eClassifiers xsi:type="ecore:EClass" name="AAlpha2Sec" eSuperTypes="#//RPA"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sys2ClientBinding" eSuperTypes="#//PB">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientsp" eType="#//Sys2ClientSP"
+        eOpposite="#//Sys2ClientSP/sys2clientbinding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientcp" eType="#//Sys2ClientCP"
+        eOpposite="#//Sys2ClientCP/sys2clientbinding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemInterface" eSuperTypes="#//InterfaceConfig">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientsp" upperBound="-1"
+        eType="#//Sys2ClientSP" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sys2ClientSP" eSuperTypes="#//PPConf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientbinding" eType="#//Sys2ClientBinding"
+        eOpposite="#//Sys2ClientBinding/sys2clientsp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sys2ClientCP" eSuperTypes="#//PPComp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sys2clientbinding" eType="#//Sys2ClientBinding"
+        eOpposite="#//Sys2ClientBinding/sys2clientcp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Serv2ServBinding" eSuperTypes="#//PB">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2servcompconfp"
+        eType="#//ServConf2ServCompConfP" eOpposite="#//ServConf2ServCompConfP/serv2servbinding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2servcompcompp"
+        eType="#//ServConf2ServCompCompP" eOpposite="#//ServConf2ServCompCompP/serv2servbinding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerConfigInterface" eSuperTypes="#//InterfaceConfig">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2servcompconfp"
+        upperBound="-1" eType="#//ServConf2ServCompConfP" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2connectservp"
+        upperBound="-1" eType="#//ServConf2ConnectServP" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServConf2ServCompConfP" eSuperTypes="#//PPConf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serv2servbinding" eType="#//Serv2ServBinding"
+        eOpposite="#//Serv2ServBinding/servconf2servcompconfp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServConf2ServCompCompP" eSuperTypes="#//PPComp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serv2servbinding" eType="#//Serv2ServBinding"
+        eOpposite="#//Serv2ServBinding/servconf2servcompcompp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServConf2ConnectServP">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2connectbinding"
+        eType="#//ServConf2ConnectBinding" eOpposite="#//ServConf2ConnectBinding/servconf2connectservp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServConf2ConnectConnectP">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2connectbinding"
+        eType="#//ServConf2ConnectBinding" eOpposite="#//ServConf2ConnectBinding/servconf2connectconnectp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServConf2ConnectBinding" eSuperTypes="#//PB">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2connectservp"
+        eType="#//ServConf2ConnectServP" eOpposite="#//ServConf2ConnectServP/servconf2connectbinding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servconf2connectconnectp"
+        eType="#//ServConf2ConnectConnectP" eOpposite="#//ServConf2ConnectConnectP/servconf2connectbinding"/>
+  </eClassifiers>
 </ecore:EPackage>
