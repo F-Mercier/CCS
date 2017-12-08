@@ -3,6 +3,7 @@ package modelCCS;
 public class ProvidedPort implements IPort {
 	public int id;
 	public Boolean taken;
+	public ILink link;
 	public ProvidedPort(int id) {
 		this.id = id;
 		this.taken = false;
@@ -24,5 +25,19 @@ public class ProvidedPort implements IPort {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	@Override
+	public void passMessage(Message msg) {
+		((Binding) this.getLink()).getR().receiveMessage(msg);
+	}
+	@Override
+	public Message receiveMessage(Message msg) {
+		return msg;
+	}
+	public ILink getLink() {
+		return link;
+	}
+	public void setLink(ILink link) {
+		this.link = link;
 	}
 }

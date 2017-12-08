@@ -9,6 +9,6 @@ public class RPC extends Connector {
 		this.addRole(new ProvidedRole(16));
 		this.addRole(new ProvidedRole(32));
 		this.addRole(new RequestedRole(15));
-		this.addRole(new RequestedRole(30));
+		this.addRole(new RequestedRole(31));
 	}
 }

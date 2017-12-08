@@ -1,5 +1,7 @@
 package implCCS;
 
+import modelCCS.Message;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -12,9 +14,18 @@ public class Main {
 		RPC rpc = new RPC();
 		system.addConnector(rpc);
 		
-		system.checkState();
-		client.checkState();
-		rpc.checkState();
-	}
+		system.addAttachment(client, rpc);
+		system.addAttachment(system.getComponents().get(0), rpc);
 
+		system.checkState();
+		
+		/*
+		 * Test envoi message
+		 */
+		
+		int portTest = 100;
+		Message m = new Message(portTest, "test", "azerty");
+		client.sendMessage(m);
+		system.detectMessage(client.getPort(portTest), m);
+	}
 }

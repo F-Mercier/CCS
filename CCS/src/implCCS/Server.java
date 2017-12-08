@@ -13,6 +13,5 @@ public class Server extends Component {
 		ServerConfig serverConfig = new ServerConfig();
 		this.setConfigComponent(serverConfig);
 		serverConfig.addBinding(this);
-		serverConfig.checkState();
 	}
 }

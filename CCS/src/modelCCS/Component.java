@@ -16,7 +16,10 @@ public abstract class Component implements ElemArchi {
 		this.interfaceComponent.add(port);
 	}
 	public IPort getPort(int index) {
-		return interfaceComponent.get(index);
+		for (IPort candidate : this.getInterfaceComponent()) {
+			if (candidate.getId() == index) return candidate;
+		}
+		return null;
 	}
 	public Config getConfigComponent() {
 		return configComponent;
@@ -51,5 +54,8 @@ public abstract class Component implements ElemArchi {
 		System.out.println("*****\nPORTS\n" + this.getInterfaceComponent());
 		System.out.println("*****\nFREE PORTS\n" + this.findFreePorts());
 		System.out.println("******\nCONFIG\n" + this.getConfigComponent() + "\n******");
+		if (this.getConfigComponent() != null) {
+			this.getConfigComponent().checkState();
+		}
 	}
 }

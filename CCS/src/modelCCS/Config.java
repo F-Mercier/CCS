@@ -38,15 +38,16 @@ public abstract class Config implements ElemArchi {
 	}
 	public void addBinding(Component component) {
 		int id = links.size();
+		IPort c = this.providePort();
 		Binding b = new Binding(id, component.providePort(), this.providePort());
 		this.addLink(b);
-		System.out.println(component.toString() + " (port " + ((Binding) this.getLink(id)).getL().getId() + ") binded to " + this.toString() + " (port " + ((Binding) this.getLink(id)).getR().getId() + ") with binding number " + links.size());
+		System.out.println(component.toString() + " (port " + b.getL().getId() + ") binded to " + this.toString() + " (port " + b.getR().getId() + ") with binding number " + id);
 	}
 	public void addAttachment(Component component, Connector connector) {
 		int id = links.size();
 		Attachment a = new Attachment(id, component.providePort(), connector.provideRole());
 		this.addLink(a);
-		System.out.println(component.toString() + " (port " + ((Attachment) this.getLink(id)).getL().getId() + ") attached to " + connector.toString() + "(port " + ((Attachment) this.getLink(id)).getR().getId() + " with binding number " + links.size());
+		System.out.println(component.toString() + " (port " + a.getL().getId() + ") attached to " + connector.toString() + "(port " + a.getR().getId() + ") with binding number " + id);
 	}
 	public List<Connector> getConnectors() {
 		return connectors;
@@ -83,5 +84,11 @@ public abstract class Config implements ElemArchi {
 		System.out.println("**********\nCOMPONENTS\n" + this.getComponents());
 		System.out.println("**********\nCONNECTORS\n" + this.getConnectors());
 		System.out.println("*****\nLINKS\n" + this.getLinks() + "\n*****");
+		for (Component comp : this.getComponents()) {
+			comp.checkState();
+		}
+		for (Connector conn : this.getConnectors()) {
+			conn.checkState();
+		}
 	}
 }

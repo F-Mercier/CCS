@@ -51,5 +51,8 @@ public abstract class Connector implements ElemArchi {
 		System.out.println("*****\nROLES\n" + this.getInterfaceConnector());
 		System.out.println("*****\nFREE ROLES\n" + this.findFreeRoles());
 		System.out.println("******\nCONFIG\n" + this.getConfigConnector() + "\n******");
+		if (this.getConfigConnector() != null) {
+			this.getConfigConnector().checkState();
+		}
 	}
 }
