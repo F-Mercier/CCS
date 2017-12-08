@@ -22,21 +22,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link cCS.impl.InterfaceConnectorImpl#getNeweclass18 <em>Neweclass18</em>}</li>
+ *   <li>{@link cCS.impl.InterfaceConnectorImpl#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container implements InterfaceConnector {
 	/**
-	 * The cached value of the '{@link #getNeweclass18() <em>Neweclass18</em>}' reference.
+	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNeweclass18()
+	 * @see #getRole()
 	 * @generated
 	 * @ordered
 	 */
-	protected Role neweclass18;
+	protected Role role;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,17 +62,17 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role getNeweclass18() {
-		if (neweclass18 != null && neweclass18.eIsProxy()) {
-			InternalEObject oldNeweclass18 = (InternalEObject) neweclass18;
-			neweclass18 = (Role) eResolveProxy(oldNeweclass18);
-			if (neweclass18 != oldNeweclass18) {
+	public Role getRole() {
+		if (role != null && role.eIsProxy()) {
+			InternalEObject oldRole = (InternalEObject) role;
+			role = (Role) eResolveProxy(oldRole);
+			if (role != oldRole) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							CCSPackage.INTERFACE_CONNECTOR__NEWECLASS18, oldNeweclass18, neweclass18));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CCSPackage.INTERFACE_CONNECTOR__ROLE,
+							oldRole, role));
 			}
 		}
-		return neweclass18;
+		return role;
 	}
 
 	/**
@@ -80,8 +80,8 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role basicGetNeweclass18() {
-		return neweclass18;
+	public Role basicGetRole() {
+		return role;
 	}
 
 	/**
@@ -89,12 +89,11 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNeweclass18(Role newNeweclass18) {
-		Role oldNeweclass18 = neweclass18;
-		neweclass18 = newNeweclass18;
+	public void setRole(Role newRole) {
+		Role oldRole = role;
+		role = newRole;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CCSPackage.INTERFACE_CONNECTOR__NEWECLASS18,
-					oldNeweclass18, neweclass18));
+			eNotify(new ENotificationImpl(this, Notification.SET, CCSPackage.INTERFACE_CONNECTOR__ROLE, oldRole, role));
 	}
 
 	/**
@@ -105,10 +104,10 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CCSPackage.INTERFACE_CONNECTOR__NEWECLASS18:
+		case CCSPackage.INTERFACE_CONNECTOR__ROLE:
 			if (resolve)
-				return getNeweclass18();
-			return basicGetNeweclass18();
+				return getRole();
+			return basicGetRole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,8 +120,8 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CCSPackage.INTERFACE_CONNECTOR__NEWECLASS18:
-			setNeweclass18((Role) newValue);
+		case CCSPackage.INTERFACE_CONNECTOR__ROLE:
+			setRole((Role) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,8 +135,8 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CCSPackage.INTERFACE_CONNECTOR__NEWECLASS18:
-			setNeweclass18((Role) null);
+		case CCSPackage.INTERFACE_CONNECTOR__ROLE:
+			setRole((Role) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -151,8 +150,8 @@ public class InterfaceConnectorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CCSPackage.INTERFACE_CONNECTOR__NEWECLASS18:
-			return neweclass18 != null;
+		case CCSPackage.INTERFACE_CONNECTOR__ROLE:
+			return role != null;
 		}
 		return super.eIsSet(featureID);
 	}

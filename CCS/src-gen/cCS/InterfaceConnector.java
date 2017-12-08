@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link cCS.InterfaceConnector#getNeweclass18 <em>Neweclass18</em>}</li>
+ *   <li>{@link cCS.InterfaceConnector#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see cCS.CCSPackage#getInterfaceConnector()
@@ -22,29 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface InterfaceConnector extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Neweclass18</b></em>' reference.
+	 * Returns the value of the '<em><b>Role</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Neweclass18</em>' reference isn't clear,
+	 * If the meaning of the '<em>Role</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Neweclass18</em>' reference.
-	 * @see #setNeweclass18(Role)
-	 * @see cCS.CCSPackage#getInterfaceConnector_Neweclass18()
+	 * @return the value of the '<em>Role</em>' reference.
+	 * @see #setRole(Role)
+	 * @see cCS.CCSPackage#getInterfaceConnector_Role()
 	 * @model
 	 * @generated
 	 */
-	Role getNeweclass18();
+	Role getRole();
 
 	/**
-	 * Sets the value of the '{@link cCS.InterfaceConnector#getNeweclass18 <em>Neweclass18</em>}' reference.
+	 * Sets the value of the '{@link cCS.InterfaceConnector#getRole <em>Role</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Neweclass18</em>' reference.
-	 * @see #getNeweclass18()
+	 * @param value the new value of the '<em>Role</em>' reference.
+	 * @see #getRole()
 	 * @generated
 	 */
-	void setNeweclass18(Role value);
+	void setRole(Role value);
 
 } // InterfaceConnector

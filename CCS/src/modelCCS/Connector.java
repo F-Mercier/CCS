@@ -1,0 +1,55 @@
+package modelCCS;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Connector implements ElemArchi {
+	private List<IRole> interfaceConnector = new ArrayList<IRole>();
+	private Config configConnector = null;
+	public Connector() {
+		System.out.println(this.toString() + " created");
+	}
+	public List<IRole> getInterfaceConnector() {
+		return interfaceConnector;
+	}
+	public void addRole(IRole role) {
+		this.interfaceConnector.add(role);
+	}
+	public IRole getRole(int index) {
+		return interfaceConnector.get(index);
+	}
+	public Config getConfigConnector() {
+		return configConnector;
+	}
+	public void setConfigConnector(Config configConnector) {
+		this.configConnector = configConnector;
+		System.out.println(configConnector.toString() + " added to " + this.toString());
+	}
+	public List<IRole> findFreeRoles() {
+		List<IRole> result = new ArrayList<IRole>();
+		
+		for (IRole candidate : this.getInterfaceConnector()) {
+			if (!candidate.isTaken()) {
+				result.add(candidate);
+			}
+		}
+		
+		return result;
+	}
+	public IRole provideRole() {
+		IRole result = null;
+				
+		for (IRole candidate : this.getInterfaceConnector()) {
+			if (!candidate.isTaken()) result = candidate;
+		}
+
+		result.taken();
+		return result;
+	}
+	public void checkState() {
+		System.out.println("=========\nCONNECTOR\n" + this.toString());
+		System.out.println("*****\nROLES\n" + this.getInterfaceConnector());
+		System.out.println("*****\nFREE ROLES\n" + this.findFreeRoles());
+		System.out.println("******\nCONFIG\n" + this.getConfigConnector() + "\n******");
+	}
+}
