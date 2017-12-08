@@ -1,6 +1,7 @@
 package implCCS;
 
 import modelCCS.Connector;
+import modelCCS.Message;
 import modelCCS.ProvidedRole;
 import modelCCS.RequestedRole;
 

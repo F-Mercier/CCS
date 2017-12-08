@@ -25,7 +25,7 @@ public class Main {
 		
 		int portTest = 100;
 		Message m = new Message(portTest, "test", "azerty");
-		client.sendMessage(m);
-		system.detectMessage(client.getPort(portTest), m);
+		//client.sendMessage(m);
+		//system.detectMessage(client.getPort(portTest), m);
 	}
 }

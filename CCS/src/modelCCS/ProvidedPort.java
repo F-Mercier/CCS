@@ -39,5 +39,6 @@ public class ProvidedPort implements IPort {
 	}
 	public void setLink(ILink link) {
 		this.link = link;
+		this.taken();
 	}
 }

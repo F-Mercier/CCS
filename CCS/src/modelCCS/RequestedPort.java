@@ -28,7 +28,9 @@ public class RequestedPort implements IPort {
 	}
 	@Override
 	public void passMessage(Message msg) {
-		((Binding) this.getLink()).getR().receiveMessage(msg);
+		System.out.println(this.getLink());
+		System.out.println(this.getLink().getR());
+		((RequestedRole) this.getLink().getR()).receiveMessage(msg);
 	}
 	@Override
 	public Message receiveMessage(Message msg) {
@@ -39,5 +41,6 @@ public class RequestedPort implements IPort {
 	}
 	public void setLink(ILink link) {
 		this.link = link;
+		this.taken();
 	}
 }

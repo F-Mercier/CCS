@@ -39,5 +39,6 @@ public class ProvidedRole implements IRole {
 	}
 	public void setLink(ILink link) {
 		this.link = link;
+		this.taken();
 	}
 }

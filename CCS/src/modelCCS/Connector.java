@@ -1,7 +1,9 @@
 package modelCCS;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Connector implements ElemArchi {
 	private List<IRole> interfaceConnector = new ArrayList<IRole>();
@@ -36,6 +38,17 @@ public abstract class Connector implements ElemArchi {
 		
 		return result;
 	}
+	public Map<IRole, ILink> findUsedRoles() {
+		Map<IRole, ILink> result = new HashMap<IRole, ILink>();
+		
+		for (IRole candidate : this.getInterfaceConnector()) {
+			if (candidate.isTaken()) {
+				result.put(candidate, candidate.getLink());
+			}
+		}
+		
+		return result;
+	}
 	public IRole provideRole() {
 		IRole result = null;
 				
@@ -49,7 +62,8 @@ public abstract class Connector implements ElemArchi {
 	public void checkState() {
 		System.out.println("=========\nCONNECTOR\n" + this.toString());
 		System.out.println("*****\nROLES\n" + this.getInterfaceConnector());
-		System.out.println("*****\nFREE ROLES\n" + this.findFreeRoles());
+		System.out.println("**********\nFREE ROLES\n" + this.findFreeRoles());
+		System.out.println("**********\nUSED ROLES\n" + this.findUsedRoles());
 		System.out.println("******\nCONFIG\n" + this.getConfigConnector() + "\n******");
 		if (this.getConfigConnector() != null) {
 			this.getConfigConnector().checkState();

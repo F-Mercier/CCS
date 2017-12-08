@@ -1,7 +1,9 @@
 package modelCCS;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Config implements ElemArchi {
 	private List<IPort> interfaceConfig = new ArrayList<IPort>();
@@ -38,10 +40,11 @@ public abstract class Config implements ElemArchi {
 	}
 	public void addBinding(Component component) {
 		int id = links.size();
-		IPort c = this.providePort();
-		Binding b = new Binding(id, component.providePort(), this.providePort());
+		IPort compPort = component.providePort();
+		IPort confPort = this.providePort();
+		Binding b = new Binding(id, compPort, confPort);
 		this.addLink(b);
-		System.out.println(component.toString() + " (port " + b.getL().getId() + ") binded to " + this.toString() + " (port " + b.getR().getId() + ") with binding number " + id);
+		System.out.println(component.toString() + " (port " + compPort.getId() + ") binded to " + this.toString() + " (port " + confPort.getId() + ") with binding number " + id);
 	}
 	public void addAttachment(Component component, Connector connector) {
 		int id = links.size();
@@ -67,6 +70,17 @@ public abstract class Config implements ElemArchi {
 		
 		return result;
 	}
+	public Map<IPort, ILink> findUsedPorts() {
+		Map<IPort, ILink> result = new HashMap<IPort, ILink>();
+		
+		for (IPort candidate : this.getInterfaceConfig()) {
+			if (candidate.isTaken()) {
+				result.put(candidate, candidate.getLink());
+			}
+		}
+		
+		return result;
+	}
 	public IPort providePort() {
 		IPort result = null;
 				
@@ -81,6 +95,7 @@ public abstract class Config implements ElemArchi {
 		System.out.println("======\nCONFIG\n" + this.toString());
 		System.out.println("*****\nPORTS\n" + this.getInterfaceConfig());
 		System.out.println("**********\nFREE PORTS\n" + this.findFreePorts());
+		System.out.println("**********\nUSED PORTS\n" + this.findUsedPorts());
 		System.out.println("**********\nCOMPONENTS\n" + this.getComponents());
 		System.out.println("**********\nCONNECTORS\n" + this.getConnectors());
 		System.out.println("*****\nLINKS\n" + this.getLinks() + "\n*****");
