@@ -2,18 +2,16 @@ package implCCS;
 
 import modelCCS.Config;
 import modelCCS.ProvidedPort;
-import modelCCS.RequestedPort;
 
 public class ServerConfig extends Config {
 	public ServerConfig() {
-		this.addPort(new ProvidedPort(7));
-		this.addPort(new ProvidedPort(8));
 		this.addPort(new ProvidedPort(9));
-		this.addPort(new RequestedPort(10));
+		this.addPort(new ProvidedPort(99));
+		this.addPort(new ProvidedPort(999));
 		
 		ConnectionManager connectionManager = new ConnectionManager();
 		this.addComponent(connectionManager);
-		this.addBinding(connectionManager);
+		this.addBinding(connectionManager, 999, 999);
 	
 		SecurityManager securityManager = new SecurityManager();
 		this.addComponent(securityManager);
@@ -30,7 +28,7 @@ public class ServerConfig extends Config {
 		ConnectionToDB gamma = new ConnectionToDB();
 		this.addConnector(gamma);
 
-		this.addAttachment(connectionManager, alpha);
+		this.addAttachment(connectionManager, 11, alpha, 11);
 		this.addAttachment(securityManager, alpha);
 
 		this.addAttachment(securityManager, beta);

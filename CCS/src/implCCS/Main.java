@@ -1,7 +1,5 @@
 package implCCS;
 
-import modelCCS.Message;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -22,10 +20,11 @@ public class Main {
 		/*
 		 * Test envoi message
 		 */
-		
-		int portTest = 100;
+		/*
+		int portTest = 101;
 		Message m = new Message(portTest, "test", "azerty");
-		//client.sendMessage(m);
-		//system.detectMessage(client.getPort(portTest), m);
+		m = client.sendMessage(m);
+		System.out.println(m.getMsg());
+		*/
 	}
 }

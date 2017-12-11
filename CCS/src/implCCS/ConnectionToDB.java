@@ -1,11 +1,11 @@
 package implCCS;
 
 import modelCCS.Connector;
-import modelCCS.ProvidedRole;
+import modelCCS.RequestedRole;
 
 public class ConnectionToDB extends Connector {
 	public ConnectionToDB() {
-		this.addRole(new ProvidedRole(1));
-		this.addRole(new ProvidedRole(2));
+		this.addRole(new RequestedRole(32));
+		this.addRole(new RequestedRole(31));
 	}
 }

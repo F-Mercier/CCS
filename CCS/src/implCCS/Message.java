@@ -1,4 +1,4 @@
-package modelCCS;
+package implCCS;
 
 public class Message {
 	int port;

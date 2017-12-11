@@ -20,7 +20,10 @@ public abstract class Config implements ElemArchi {
 		this.interfaceConfig.add(port);
 	}
 	public IPort getPort(int index) {
-		return interfaceConfig.get(index);
+		for (IPort candidate : interfaceConfig) {
+			if (candidate.getId() == index) return candidate;
+		}
+		return null;
 	}
 	public List<ILink> getLinks() {
 		return links;
@@ -46,9 +49,27 @@ public abstract class Config implements ElemArchi {
 		this.addLink(b);
 		System.out.println(component.toString() + " (port " + compPort.getId() + ") binded to " + this.toString() + " (port " + confPort.getId() + ") with binding number " + id);
 	}
+	public void addBinding(Component component, int port1, int port2) {
+		int id = links.size();
+		IPort compPort = component.providePort(port1);
+		IPort confPort = this.providePort(port2);
+		Binding b = new Binding(id, compPort, confPort);
+		this.addLink(b);
+		System.out.println(component.toString() + " (port " + compPort.getId() + ") binded to " + this.toString() + " (port " + confPort.getId() + ") with binding number " + id);
+	}
 	public void addAttachment(Component component, Connector connector) {
 		int id = links.size();
-		Attachment a = new Attachment(id, component.providePort(), connector.provideRole());
+		IPort compPort = component.providePort();
+		IRole connRole = connector.provideRole();
+		Attachment a = new Attachment(id, compPort, connRole);
+		this.addLink(a);
+		System.out.println(component.toString() + " (port " + a.getL().getId() + ") attached to " + connector.toString() + "(port " + a.getR().getId() + ") with binding number " + id);
+	}
+	public void addAttachment(Component component, int port1, Connector connector, int port2) {
+		int id = links.size();
+		IPort compPort = component.providePort(port1);
+		IRole connRole = connector.provideRole(port2);
+		Attachment a = new Attachment(id, compPort, connRole);
 		this.addLink(a);
 		System.out.println(component.toString() + " (port " + a.getL().getId() + ") attached to " + connector.toString() + "(port " + a.getR().getId() + ") with binding number " + id);
 	}
@@ -89,6 +110,15 @@ public abstract class Config implements ElemArchi {
 		}
 
 		result.taken();
+		return result;
+	}
+	public IPort providePort(int id) {
+		IPort result = null;
+		if (!this.getPort(id).isTaken()) {
+			this.getPort(id).taken();
+			result = this.getPort(id);
+		}
+		
 		return result;
 	}
 	public void checkState() {

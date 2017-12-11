@@ -30,6 +30,6 @@ public class Binding implements ILink {
 		}
 	}
 	public boolean sameType(IPort p1, IPort p2) {
-		return p1.getClass().getCanonicalName().equals(p2.getClass().getCanonicalName());
+		return p1.getClass().getCanonicalName().substring(9, 16).equals(p2.getClass().getCanonicalName().substring(9, 16));
 	}
 }

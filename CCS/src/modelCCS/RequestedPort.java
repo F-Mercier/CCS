@@ -1,5 +1,7 @@
 package modelCCS;
 
+import implCCS.Message;
+
 public class RequestedPort implements IPort {
 	public int id;
 	public Boolean taken;
@@ -27,13 +29,13 @@ public class RequestedPort implements IPort {
 		this.id = id;
 	}
 	@Override
-	public void passMessage(Message msg) {
-		System.out.println(this.getLink());
-		System.out.println(this.getLink().getR());
-		((RequestedRole) this.getLink().getR()).receiveMessage(msg);
+	public Message passMessage(Message msg) {
+		System.out.println(this.getId() + " : " + msg.getMsg());
+		return ((Attachment) this.getLink()).getR().receiveMessage(msg);
 	}
 	@Override
 	public Message receiveMessage(Message msg) {
+		System.out.println(this.getId() + " : " + msg.getMsg());
 		return msg;
 	}
 	public ILink getLink() {

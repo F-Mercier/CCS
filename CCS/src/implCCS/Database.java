@@ -11,9 +11,8 @@ public class Database extends Component {
 	private Map<Integer, Integer> power = new HashMap<Integer, Integer>();
 	private Map<Integer, String> password = new HashMap<Integer, String>();
 	public Database() {
-		this.addPort(new ProvidedPort(3));
-		this.addPort(new ProvidedPort(5));
-		this.addPort(new ProvidedPort(7));
+		this.addPort(new ProvidedPort(32));
+		this.addPort(new ProvidedPort(22));
 	}
 	public String getName(int id) {
 		return this.name.get(id);
@@ -32,5 +31,8 @@ public class Database extends Component {
 	}
 	public boolean passwordSet(int id) {
 		return !(this.password.get(id).isEmpty());
+	}
+	public boolean checkPassword(Message msg) {
+		return (password.containsValue(msg.getPw()));
 	}
 }

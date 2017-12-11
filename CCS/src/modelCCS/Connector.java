@@ -18,7 +18,10 @@ public abstract class Connector implements ElemArchi {
 		this.interfaceConnector.add(role);
 	}
 	public IRole getRole(int index) {
-		return interfaceConnector.get(index);
+		for (IRole candidate : interfaceConnector) {
+			if (candidate.getId() == index) return candidate;
+		}
+		return null;
 	}
 	public Config getConfigConnector() {
 		return configConnector;
@@ -57,6 +60,15 @@ public abstract class Connector implements ElemArchi {
 		}
 
 		result.taken();
+		return result;
+	}
+	public IRole provideRole(int id) {
+		IRole result = null;
+		if (!this.getRole(id).isTaken()) {
+			this.getRole(id).taken();
+			result = this.getRole(id);
+		}
+		
 		return result;
 	}
 	public void checkState() {

@@ -30,6 +30,6 @@ public class Attachment implements ILink {
 		}
 	}
 	public boolean sameType(IPort p, IRole r) {
-		return p.getClass().getCanonicalName().equals(r.getClass().getCanonicalName());
+		return p.getClass().getCanonicalName().substring(9, 16).equals(r.getClass().getCanonicalName().substring(9, 16));
 	}
 }

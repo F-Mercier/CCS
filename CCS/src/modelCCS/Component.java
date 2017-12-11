@@ -62,6 +62,15 @@ public abstract class Component implements ElemArchi {
 		result.isTaken();
 		return result;
 	}
+	public IPort providePort(int id) {
+		IPort result = null;
+		if (!this.getPort(id).isTaken()) {
+			this.getPort(id).taken();
+			result = this.getPort(id);
+		}
+		
+		return result;
+	}
 	public void checkState() {
 		System.out.println("=========\nCOMPONENT\n" + this.toString());
 		System.out.println("*****\nPORTS\n" + this.getInterfaceComponent());
